@@ -5,7 +5,7 @@
 
 >[Dr. Mehmet Oz, Centers for Medicare & Medicaid Services (CMS) on medicare fraud in Queens, NYC](https://x.com/DrOzCMS/status/2035155977201209514?s=20)
 
-![image of dr. mehmet oz](https://ibb.co/0jtXnCRN)
+![](https://ibb.co/0jtXnCRN)
 
 So I came across these two news snippets and decided take to take a look into if I can find outliers in publicly available medicaid data to expose these frauds.
 
