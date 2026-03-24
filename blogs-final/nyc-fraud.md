@@ -1,7 +1,6 @@
 ---
 layout: layout.njk
 title: NYC Fraud Analysis
-permalink: /blog/nyc-fraud/index.html
 ---
 
 # Medicare Fraud in Queens, New York City 
