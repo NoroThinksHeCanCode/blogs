@@ -11,4 +11,5 @@ I share my musings on this site.
 
 ---
 
-### [View my Blog Posts](/blogs/blogs-final/)
+### My blogs:
+1. [NYC Fraud Analysis](/blogs/blogs-final/nyc-fraud/)
