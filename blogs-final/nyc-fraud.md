@@ -3,7 +3,7 @@ layout: layout.njk
 title: NYC Fraud Analysis
 ---
 
-# Medicare Fraud in Queens, New York City 
+# Medicare Fraud in Queens, New York City and how to detect it
 
 >[Two Queens Men Charged with $120M Adult Day Care and Pharmacy Fraud on Medicare and Medicaid](https://www.justice.gov/opa/pr/two-queens-men-charged-120m-adult-day-care-and-pharmacy-fraud-medicare-and-medicaid)
 
@@ -11,15 +11,16 @@ title: NYC Fraud Analysis
 
 <img width="598" height="553" alt="image" src="https://github.com/user-attachments/assets/f5562ee4-cfe6-4e30-bbc3-1807aa7562af" />
 
-So I came across these two news snippets and decided take to take a look into if I can find outliers in publicly available medicaid data to expose these frauds.
+The tweet and article above talk about how over $120 million has been stolen through submission wrongful claims for services that never existed. This got me thinking if there was a way to single out such fraud cases from publicly available data. I did a little bit of digging and found out through my brother that the DOGE publishes data for medicalc claims for all fifty US states for every service provider and every service individually for the past seven years. Here's how the data is structured: 
 
-## Some terminology:
 1. HCPCS/CPT Code: the standard codes that describe medical procedures and equipment
 2. NPI code: a National Provider Identifier (NPI) is a unique 10-digit identification number for covered U.S. healthcare providers, mandated by HIPAA.
 
+The [NPI Registry](https://npiregistry.cms.hhs.gov/search) can be used to get more information about a particular service provider (Name, Practice locations, service provided etc)
 
-I sourced the data from [Open HHS](https://opendata.hhs.gov/datasets/medicaid-provider-spending/), that the DOGE publishes. The data was then cleaned and put into the .parquet file extension. I then put all the parquet files as dataframes into a dictionary, like so. 
+You can then access the number of claims and total claim paid corresponding to each service provider (using the NPI code) or for a service in a particular area. We could then do some EDA by plotting histograms and box blots for average cost per claim (=total paid/total claims) or by plotting scatter plots for total claims paid and total claims for a particular service for a year.
 
+I cleaned the datasets and exported them as Parquet files. From there, I loaded them into a dictionary of DataFrames for easy access
 
 ```python
 import os 
@@ -36,7 +37,7 @@ df_medicaid_provider_spending = dataframes['medicaid_provider_spending']
 df_medicaid_provider_spending.head()
 ```
 <img width="483" height="128" alt="image" src="https://github.com/user-attachments/assets/dc63d4f3-d69a-46ee-83b8-0e314080b682" />
-<img width="1475" height="165" alt="image" src="https://github.com/user-attachments/assets/25974770-e511-4080-bd9b-d433d28901da" />
+<img width="1000" height="165" alt="image" src="https://github.com/user-attachments/assets/25974770-e511-4080-bd9b-d433d28901da" />
 
 
 Then we filter for New York city codes we get the list of all [HCPCS codes](https://www.aapc.com/codes/hcpcs-codes-range/6/) for hospice care and medical equipment categories and filter for those.
@@ -50,7 +51,7 @@ hospice_providers_NYC.head()
 ```
 <img width="1481" height="34" alt="image" src="https://github.com/user-attachments/assets/a018f124-5684-43e2-a46d-d689cf5e4187" />
 
-Unfortunately, the Open HHS data doesnt have any data related to these codes in the New York City Area 
+Unfortunately, the Open HHS data doesnt have any data related to these codes in the New York City area
 
 ## What we could've done: Methods for Outlier detection
 
