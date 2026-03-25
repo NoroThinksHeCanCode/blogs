@@ -50,6 +50,6 @@ nyc_npi = npi_locations[npi_locations['Affiliation Address City'] == 'New York']
 hospice_providers_NYC = medicaid_provider_spending_NYC[medicaid_provider_spending_NYC['HCPCS_CODE'].isin(hospice_codes)]
 hospice_providers_NYC.head()
 ```
-<img width="1481" height="34" alt="image" src="https://github.com/user-attachments/assets/a018f124-5684-43e2-a46d-d689cf5e4187" />
+<img width="1000" height="34" alt="image" src="https://github.com/user-attachments/assets/a018f124-5684-43e2-a46d-d689cf5e4187" />
 
 Unfortunately, the Open HHS data doesnt have any data related to these codes in the New York City area
