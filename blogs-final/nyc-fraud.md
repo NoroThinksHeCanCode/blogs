@@ -53,9 +53,3 @@ hospice_providers_NYC.head()
 <img width="1481" height="34" alt="image" src="https://github.com/user-attachments/assets/a018f124-5684-43e2-a46d-d689cf5e4187" />
 
 Unfortunately, the Open HHS data doesnt have any data related to these codes in the New York City area
-
-## What we could've done: Methods for Outlier detection
-
-Since we expect the claims per distribution to be non-zero and right-skewed, a simple way to detect outliers is to check data points that are in the 95th-99th percentile (as a rule of thumb).  You can also use a box plot to visualise the data better. 
-
-A more complicated method would be to use an unsupervised algorithm that isolates data points. The [Isolation Forest](https://scikit-learn.org/stable/modules/outlier_detection.html#isolation-forest) algorithm would be ideal for this as it uses BSTs to isolate data points and isnt too heavy on memory either. 
