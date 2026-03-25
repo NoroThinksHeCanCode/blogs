@@ -1,46 +1,44 @@
 <style>
-  /* Fixed Dark Theme Variables */
-  :root {
-    --bg-color: #1a1a1a;        /* Sleek Charcoal */
-    --text-color: #e0e0e0;      /* Soft White */
-    --link-color: #4db8ff;      /* Electric Blue */
-    --nav-border: #333333;      /* Subtle Divider */
-    --code-bg: #2d2d2d;         /* Darker Gray for Python snippets */
-  }
-
   body { 
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
+    /* The core Dark Theme colors */
+    background-color: #121212 !important; /* Deep Black/Gray */
+    color: #f0f0f0 !important;           /* Bright Off-White text */
+    
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
     max-width: 800px; 
     margin: 40px auto; 
     padding: 0 20px; 
     line-height: 1.6; 
-    background-color: var(--bg-color);
-    color: var(--text-color);
+  }
+
+  /* Make sure headings are also visible */
+  h1, h2, h3, h4, h5, h6 {
+    color: #ffffff !important;
   }
 
   nav { 
     margin-bottom: 20px; 
     padding-bottom: 10px; 
-    border-bottom: 1px solid var(--nav-border); 
+    border-bottom: 1px solid #333; 
   }
 
+  /* Links need to be a bright, readable color */
   nav a, a { 
     text-decoration: none; 
-    color: var(--link-color); 
+    color: #4db8ff !important; /* Bright Electric Blue */
     font-weight: bold; 
   }
 
   a:hover { 
     text-decoration: underline; 
-    opacity: 0.8;
   }
 
-  /* Style for your code blocks */
+  /* Style for your code blocks (for Python snippets) */
   pre, code {
-    background-color: var(--code-bg);
+    background-color: #2d2d2d;
+    color: #f8f8f2;
     padding: 3px 6px;
     border-radius: 4px;
     font-family: 'Courier New', Courier, monospace;
-    font-size: 0.9em;
   }
 </style>
