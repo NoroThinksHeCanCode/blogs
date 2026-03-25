@@ -44,7 +44,8 @@ Then we filter for New York city codes we get the list of all [HCPCS codes](http
 
 ```python
 npi_locations = dataframes['npi_endpoints']
-hospice_codes = ['Q5001', 'Q5002','Q5003', 'Q5004', 'G0181', 'E0950', 'E0999', 'E0424', 'E0487', 'L2000', 'L2999', 'E0193', 'E0194', 'E0271', 'E0280', 'E0100','E0159']
+hospice_codes = ['Q5001', 'Q5002','Q5003', 'Q5004', 'G0181', 'E0950', 'E0999', 'E0424', 'E0487',
+                 'L2000', 'L2999', 'E0193', 'E0194', 'E0271', 'E0280', 'E0100','E0159']
 nyc_npi = npi_locations[npi_locations['Affiliation Address City'] == 'New York']['NPI']
 hospice_providers_NYC = medicaid_provider_spending_NYC[medicaid_provider_spending_NYC['HCPCS_CODE'].isin(hospice_codes)]
 hospice_providers_NYC.head()
