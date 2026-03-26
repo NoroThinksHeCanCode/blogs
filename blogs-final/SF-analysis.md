@@ -5,7 +5,7 @@ title: SF Fraud Analysis
 
 >[Feds charge former Bay Area resident with $90 million in health care fraud](https://www.sfchronicle.com/crime/article/health-care-fraud-anar-rustamov-22089325.php)
 
-In continuation To my New York City medicare fraud blog, I found a similar case in San Francisco where $90 million was stolen through submission of false reimbursements for medical equipment such as blood glucose monitors and orthotic braces “that was not provided, not needed by patients, and not authorized by a medical provider”. Can we find any anomalies in the San Francisco area for medical equipment claims using the Open HHS data?
+I found a case in San Francisco where $90 million was stolen through submission of false reimbursements for medical equipment such as blood glucose monitors and orthotic braces “that was not provided, not needed by patients, and not authorized by a medical provider”. Can we find any anomalies in the San Francisco area for medical equipment claims using the Open HHS data?
 
 ```python
 npi_locations = dataframes['npi_endpoints']
