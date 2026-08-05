@@ -4,8 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ title or "My Blog" }}</title>
+
   <style>
   /* Base Styles */
+  :root { color-scheme: dark; }
   body { 
     background-color: #121212 !important; 
     color: #f0f0f0 !important;           
@@ -59,6 +61,21 @@
     }
   }
   </style>
+
+  <!-- MathJax: client-side math rendering for $$...$$ and $...$ -->
+  <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      displayMath: [['$$','$$']]
+    },
+    options: {
+      skipHtmlTags: ['script','style','textarea','pre']
+    }
+  };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+
 </head>
 <body>
   <nav>
