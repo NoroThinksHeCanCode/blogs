@@ -12,4 +12,4 @@ I share my musings on this site.
 ---
 
 ### My blog(s):
-1. [Joint embedding architectures and Yann LeCun's billion dollar bet](blogs-final/Rotational-invariance-of-attention&privileged-basis.md)
+1. [Rotational Invariance of attention and Privileged Basis](blogs-final/Rotational-invariance-of-attention&privileged-basis.md)
