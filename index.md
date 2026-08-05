@@ -12,4 +12,4 @@ I share my musings on this site.
 ---
 
 ### My blog(s):
-1. [Rotational Invariance of attention and Privileged Basis](blogs-final/rotational-invariance-of-attention-and-privileged-basis.md)
+1. [Rotational Invariance of attention and Privileged Basis](blogs-final/rotational-invariance-of-attention-and-privileged-basis)
