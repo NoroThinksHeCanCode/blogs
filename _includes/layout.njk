@@ -52,6 +52,12 @@
     white-space: pre-wrap; 
   }
 
+  /* MathJax Dark Mode */
+  /* Ensure MathJax SVG and CHTML output use light colors on dark background */
+  .mjx-svg, .mjx-chtml { color: #f0f0f0 !important; }
+  .mjx-svg path, .mjx-svg g { fill: #f0f0f0 !important; stroke: #f0f0f0 !important; }
+  .mjx-chtml * { color: #f0f0f0 !important; }
+
   /* MEDIA QUERY: Adjustments for very small screens */
   @media (max-width: 600px) {
     body {
