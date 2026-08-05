@@ -6,10 +6,10 @@ permalink: /blogs-final/rotational-invariance-of-attention-and-privileged-basis/
 
 # Rotational invariance of attention and privileged basis
 
-As a linear algebra enthusiast a very cool property of attention computation that I came across when I was reading [Anthropic's  A Mathematical Framework for Transformer Circuits](https://transform[...]
+As a linear algebra enthusiast a very cool property of attention computation that I came across when I was reading [Anthropic's  A Mathematical Framework for Transformer Circuits](https://transformer-circuits.pub/2021/framework/index.html#architecture-attn-as-movement)
 A **basis of a vector space** is defined as follows,
 
-A basis $B$ of a vector space $V$ over a field $F$ (such as the real numbers $ {\displaystyle \mathbb {R} }$ or the complex numbers $\mathbb{C}$ ) is a linearly independent subset of $V$ that spans[...]
+A basis $B$ of a vector space $V$ over a field $F$ (such as the real numbers $ {\displaystyle \mathbb {R} }$ or the complex numbers $\mathbb{C}$ ) is a linearly independent subset of $V$ that spans $V$. 
 
 Upon digging deeper, I found out that attention operations do not depend on the basis vectors of the embedding space (or the residual stream). How does this work mathematically? 
 
@@ -32,11 +32,11 @@ Now applying the rotation, $x' = R x$, $W_Q' = W_Q R^  T$, and $W_K' = W_K R^T$ 
 
 $$(x_i')^T (W_Q'^T W_K') x_j' = (R x_i)^T (R W_Q^T W_K R^T) (R x_j) = x_i^T R^T R W_Q^T W_K R^T R x_j = x_i^T (W_Q^T W_K) x_j$$
 
-which is the same as applying attention without rotating the residual stream vectors. This is a pretty cool result that even if change our basis orthogonally, the attention operations remain the s[...]
+which is the same as applying attention without rotating the residual stream vectors. This is a pretty cool result that even if change our basis orthogonally, the attention operations remain the same.  
 
 ## MLP Head
 
-An MLP layer is another bunch of linear transformations with its weight matrices. While looking at a residual stream there are two things an MLP head does it reads information from it and writes i[...]
+An MLP layer is another bunch of linear transformations with its weight matrices. While looking at a residual stream there are two things an MLP head does it reads information from it and writes into it. This can be represented as two weight matrices $W_{read}$ and $W_{write}$.
 Applying the rotation on these,
 
 $$W_{read}'= W_{read}R \text{ and }W_{write}'= W_{write}R$$
