@@ -1,3 +1,9 @@
+---
+layout: layout.njk
+title: Rotational invariance of attention and privileged basis
+permalink: /blogs-final/rotational-invariance-of-attention-and-privileged-basis/
+---
+
 # Rotational invariance of attention and privileged basis
 
 As a linear algebra enthusiast a very cool property of attention computation that I came across when I was reading [Anthropic's  A Mathematical Framework for Transformer Circuits](https://transform[...]
